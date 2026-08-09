@@ -19,7 +19,7 @@ export default function CreatePost({ user }) {
     }
 
     try {
-      await API.post("/posts", form);
+      await API.post("/api/posts", form);
       setForm({ title: "", content: "" });
       setRefreshKey((prev) => prev + 1);
       navigate("/");

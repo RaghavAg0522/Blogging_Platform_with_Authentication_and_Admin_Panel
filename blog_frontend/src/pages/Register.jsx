@@ -10,7 +10,7 @@ export default function Register() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await API.post("/auth/register", form);
+      await API.post("/api/auth/register", form);
       alert("Registered! Please log in.");
       navigate("/login");
     } catch (error) {
